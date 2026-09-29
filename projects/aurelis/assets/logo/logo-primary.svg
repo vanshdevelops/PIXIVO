@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&amp;family=Montserrat:wght@300;400;500&amp;display=swap');
+      
+      .wordmark {
+        font-family: 'Cinzel', 'Cormorant Garamond', 'Didot', 'Bodoni MT', 'Times New Roman', serif;
+        font-size: 82px;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        fill: #0B0B0C;
+        text-anchor: middle;
+      }
+      
+      .descriptor {
+        font-family: 'Montserrat', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.52em;
+        text-transform: uppercase;
+        fill: #8C857B;
+        text-anchor: middle;
+      }
+
+      .divider {
+        stroke: #CBB99F;
+        stroke-width: 0.75;
+        stroke-linecap: round;
+      }
+
+      .accent-dot {
+        fill: #CBB99F;
+      }
+    </style>
+  </defs>
+
+  <!-- Centered Brand Composition -->
+  <g transform="translate(500, 110)">
+    <!-- Main AURELIS Wordmark -->
+    <text class="wordmark" x="16" y="0">AURELIS</text>
+
+    <!-- Refined Accent Divider -->
+    <line class="divider" x1="-160" y1="36" x2="-20" y2="36" />
+    <polygon class="accent-dot" points="0,32 4,36 0,40 -4,36" />
+    <line class="divider" x1="20" y1="36" x2="160" y2="36" />
+
+    <!-- Subtitle Descriptor -->
+    <text class="descriptor" x="4" y="68">LUXURY FRAGRANCE</text>
+  </g>
+</svg>

@@ -1,0 +1,935 @@
+/* =============================================================================
+   AURELIS — LUXURY VISUAL CONTRAST & PREMIUM MOTION ENGINE
+   Haute Parfumerie Design System & Motion Architecture
+   Conceived for PIXIVO Flagship Portfolio
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   1. WARM LUXURY HIGH-CONTRAST PALETTE TOKENS
+   ----------------------------------------------------------------------------- */
+:root {
+  /* Surfaces & Canvases */
+  --aur-bg-primary: #F1E9DC;          /* Primary warm beige canvas */
+  --aur-bg-secondary: #E8DECF;        /* Secondary warm stone for alternating section depth */
+  --aur-bg-surface: #F8F4EC;          /* Clean warm ivory surface */
+  --aur-bg-card: #EDE5D8;             /* Architectural card plinth */
+  --aur-bg-card-hover: #F5EFE4;       /* Card elevation surface */
+  --aur-bg-ivory: #FAF7F0;            /* High-key warm ivory */
+
+  /* HIGH-CONTRAST TEXT HIERARCHY */
+  /* LEVEL 1: Main Section Headings (Deep Charcoal / Near-Black) */
+  --aur-text-primary: #1F1C18;        
+  --aur-text-espresso: #14120F;       
+
+  /* LEVEL 2: Subheadings / Product Names (Dark Warm Charcoal) */
+  --aur-text-secondary: #352F28;      
+
+  /* LEVEL 3: Body Copy (Medium-Dark Warm Gray) */
+  --aur-text-body: #443D34;           
+
+  /* LEVEL 4: Small Editorial Labels & Captions (Dark Muted Warm Gray) */
+  --aur-text-muted: #574E43;          
+
+  /* LEVEL 4 ACCENT: Warm Antique Bronze-Gold (High Contrast on Beige) */
+  --aur-accent-gold: #7E5B28;         
+  --aur-accent-secondary: #9B753E;    
+  --aur-accent-glow: rgba(126, 91, 40, 0.16);
+  --aur-amber-glow: rgba(184, 134, 74, 0.22);
+
+  /* LEVEL 5: Borders & Dividers */
+  --aur-border-warm: #C4B49E;         /* Warm stone border */
+  --aur-border-subtle: rgba(126, 91, 40, 0.18);
+  --aur-border-bright: rgba(126, 91, 40, 0.45);
+
+  /* Override Core Design System Tokens in styles.css */
+  --obsidian: #F1E9DC;                /* Canvas background */
+  --charcoal: #EDE5D8;                /* Card surface */
+  --charcoal-light: #F8F4EC;          /* Light card surface */
+  --taupe: #443D34;                   /* Body text & descriptors */
+  --taupe-muted: #574E43;             /* Meta text & captions */
+  --champagne: #7E5B28;               /* Accent gold/brass with strong contrast */
+  --champagne-light: #FAF7F0;         /* Light ivory contrast */
+  --champagne-dark: #63471D;          /* Deep champagne bronze */
+  --ivory: #1F1C18;                   /* Headings & key titles (Level 1) */
+  --ivory-muted: #352F28;             /* Subtitles & quotes (Level 2) */
+
+  /* Hairlines & Elevation */
+  --border-hairline: 1px solid rgba(126, 91, 40, 0.22);
+  --border-hairline-subtle: 1px solid rgba(196, 180, 158, 0.55);
+  --border-hairline-bright: 1px solid rgba(126, 91, 40, 0.50);
+  --box-shadow-plinth: 0 25px 50px -12px rgba(31, 28, 24, 0.12);
+  --box-shadow-card: 0 15px 35px -5px rgba(31, 28, 24, 0.08);
+  --box-shadow-card-hover: 0 22px 50px -8px rgba(31, 28, 24, 0.15);
+}
+
+/* -----------------------------------------------------------------------------
+   2. GLOBAL BASE & TYPOGRAPHY ENFORCEMENT
+   ----------------------------------------------------------------------------- */
+html, body {
+  background-color: var(--aur-bg-primary) !important;
+  color: var(--aur-text-primary) !important;
+}
+
+/* Atmospheric Ambient Warmth (Subtle Studio Light, No Black Halos) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 18% 12%, rgba(203, 185, 159, 0.20) 0%, transparent 50%),
+    radial-gradient(circle at 82% 60%, rgba(232, 222, 207, 0.30) 0%, transparent 55%),
+    radial-gradient(circle at 50% 92%, rgba(190, 160, 110, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* Main Headings (Level 1) */
+h1, h2,
+.hero-brand,
+.section-title,
+.section-title-large,
+.cta-brand-title {
+  color: var(--aur-text-primary) !important;
+  text-shadow: none !important;
+  letter-spacing: normal;
+}
+
+/* Subheadings / Product Names (Level 2) */
+h3,
+.section-subtitle,
+.stage-title,
+.card-heading,
+.contrast-title,
+.note-elements {
+  color: var(--aur-text-primary) !important;
+}
+
+/* Body Copy (Level 3) */
+p,
+.lead-text,
+.body-text,
+.contrast-desc,
+.note-narrative,
+.stage-desc,
+.philosophy-body,
+.card-detail,
+.social-campaign-desc,
+.attr-desc {
+  color: var(--aur-text-body) !important;
+  font-weight: 400 !important;
+}
+
+/* Small Editorial Labels (Level 4) */
+.section-label,
+.meta-tag,
+.hero-motto,
+.card-tag,
+.note-tier-badge,
+.btn-edition,
+.stage-edition,
+.plate-index,
+.cta-brand-sub,
+.strip-header .strip-sub {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.22em !important;
+}
+
+/* Decorative Metadata (Level 5) */
+.meta-divider,
+.link-num,
+.scroll-text,
+.attr-number,
+.spec-label,
+.matrix-label,
+.presentation-note,
+.film-footnote,
+.footer-disclosure-text {
+  color: var(--aur-text-muted) !important;
+  font-weight: 500 !important;
+}
+
+/* -----------------------------------------------------------------------------
+   3. SECTION CONTRAST & EDITORIAL PACING
+   ----------------------------------------------------------------------------- */
+.hero-section {
+  background-color: var(--aur-bg-primary) !important;
+}
+
+.intro-section {
+  background-color: var(--aur-bg-primary) !important;
+}
+
+.signature-section {
+  background: var(--aur-bg-secondary) !important;
+  border-top: 1px solid var(--aur-border-subtle);
+  border-bottom: 1px solid var(--aur-border-subtle);
+}
+
+.notes-section {
+  background-color: var(--aur-bg-primary) !important;
+}
+
+.contrast-section {
+  background-color: var(--aur-bg-secondary) !important;
+  border-top: 1px solid var(--aur-border-subtle);
+  border-bottom: 1px solid var(--aur-border-subtle);
+}
+
+.collection-section {
+  background-color: var(--aur-bg-primary) !important;
+}
+
+.film-section {
+  background-color: var(--aur-bg-secondary) !important;
+  border-top: 1px solid var(--aur-border-subtle);
+  border-bottom: 1px solid var(--aur-border-subtle);
+}
+
+.philosophy-section {
+  background-color: var(--aur-bg-surface) !important;
+  border-top: 1px solid var(--aur-border-subtle);
+  border-bottom: 1px solid var(--aur-border-subtle);
+}
+
+.editorial-section {
+  background-color: var(--aur-bg-primary) !important;
+}
+
+.final-cta-section {
+  background-color: var(--aur-bg-surface) !important;
+  background-image: radial-gradient(circle at 50% 50%, rgba(203, 185, 159, 0.28) 0%, var(--aur-bg-surface) 75%) !important;
+  border-top: 1px solid var(--aur-border-subtle);
+}
+
+/* Grounded Architectural Dark Espresso Footer */
+.site-footer {
+  background-color: #1A1714 !important;
+  border-top: 1px solid rgba(126, 91, 40, 0.35) !important;
+  color: #FAF7F0 !important;
+}
+.site-footer .footer-heading {
+  color: #D4C5B0 !important;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.site-footer .footer-links a,
+.site-footer .footer-nav-link {
+  color: #C9BBA7 !important;
+}
+.site-footer .footer-links a:hover,
+.site-footer .footer-nav-link:hover {
+  color: #FAF7F0 !important;
+}
+.site-footer .footer-positioning,
+.site-footer .footer-disclosure-text,
+.site-footer .footer-copyright,
+.site-footer .footer-agency-note {
+  color: #A39B8F !important;
+}
+.site-footer .footer-motto-tag,
+.site-footer .credit-label {
+  color: #CBB99F !important;
+}
+.site-footer .credit-studio {
+  color: #FAF7F0 !important;
+}
+
+/* -----------------------------------------------------------------------------
+   4. NAVIGATION & HEADER
+   ----------------------------------------------------------------------------- */
+.site-header {
+  transition: background-color var(--trans-smooth), border-color var(--trans-smooth), backdrop-filter var(--trans-smooth);
+}
+.site-header.scrolled {
+  background-color: rgba(241, 233, 220, 0.92) !important;
+  border-bottom: 1px solid var(--aur-border-subtle) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.nav-link {
+  color: var(--aur-text-secondary) !important;
+  font-weight: 500;
+  position: relative;
+  transition: color var(--trans-fast);
+}
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.active {
+  color: var(--aur-text-primary) !important;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--aur-accent-gold) !important;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link.active::after,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-cta-pill {
+  border: 1px solid var(--aur-border-warm) !important;
+  background: rgba(250, 247, 240, 0.85) !important;
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+  transition: all var(--trans-fast);
+}
+.nav-cta-pill:hover {
+  background: var(--aur-text-primary) !important;
+  border-color: var(--aur-text-primary) !important;
+  color: var(--aur-bg-ivory) !important;
+  transform: translateY(-1px);
+}
+
+.hamburger-line {
+  background-color: var(--aur-text-primary) !important;
+}
+
+/* Mobile Drawer Menu */
+.mobile-drawer {
+  background-color: rgba(241, 233, 220, 0.98) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.mobile-brand-title {
+  color: var(--aur-text-primary) !important;
+}
+.mobile-nav-link {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+.mobile-nav-link:hover {
+  color: var(--aur-accent-gold) !important;
+}
+.drawer-close {
+  color: var(--aur-text-primary) !important;
+}
+
+/* -----------------------------------------------------------------------------
+   5. HERO SECTION SPECIFICS & PRODUCT MOTION
+   ----------------------------------------------------------------------------- */
+.hero-brand {
+  color: var(--aur-text-primary) !important;
+  text-shadow: none !important;
+  letter-spacing: clamp(0.16em, 2.5vw, 0.28em);
+  text-indent: clamp(0.16em, 2.5vw, 0.28em);
+}
+
+.hero-motto {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600 !important;
+  letter-spacing: clamp(0.24em, 2vw, 0.42em) !important;
+  text-indent: clamp(0.24em, 2vw, 0.42em) !important;
+}
+
+.hero-quote {
+  color: var(--aur-text-secondary) !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+.hero-product-badge {
+  background: rgba(250, 247, 240, 0.94) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  box-shadow: 0 15px 35px rgba(31, 28, 24, 0.08) !important;
+  backdrop-filter: blur(10px);
+}
+.hero-product-badge .badge-title {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+.hero-product-badge .badge-sub {
+  color: var(--aur-text-muted) !important;
+  font-weight: 500;
+}
+
+/* Hero Atmospheric Lighting Drift */
+.hero-background-glow {
+  background: radial-gradient(circle at 50% 45%, rgba(184, 134, 74, 0.18) 0%, rgba(241, 233, 220, 0) 70%) !important;
+  animation: aurHeroGlowDrift 14s ease-in-out infinite alternate;
+}
+@keyframes aurHeroGlowDrift {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.75; }
+  100% { transform: translate(-49%, -51%) scale(1.08); opacity: 1; }
+}
+
+/* Hero Product Continuous Floating Motion */
+.hero-bottle-img {
+  will-change: transform;
+  filter: drop-shadow(0 20px 35px rgba(31, 28, 24, 0.28));
+  animation: aurHeroBottleFloat 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+@keyframes aurHeroBottleFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0) scale(1.01);
+  }
+  100% {
+    transform: translate3d(0, 2px, 0) scale(0.998);
+  }
+}
+
+.bottle-plinth-reflection {
+  transition: opacity 0.4s ease, transform 0.15s ease-out;
+}
+
+/* -----------------------------------------------------------------------------
+   6. NOIR ÉCLAT SIGNATURE SECTION & PRODUCT SCROLL STORY
+   ----------------------------------------------------------------------------- */
+.section-title-large {
+  color: var(--aur-text-primary) !important;
+  text-shadow: none !important;
+}
+
+.specs-box {
+  background: var(--aur-bg-card) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  box-shadow: 0 20px 48px rgba(31, 28, 24, 0.08) !important;
+  border-radius: 4px;
+}
+
+.specs-heading {
+  color: var(--aur-text-primary) !important;
+  border-bottom: 1px solid var(--aur-border-warm) !important;
+  font-weight: 600 !important;
+}
+
+.specs-list li {
+  border-bottom: 1px solid rgba(126, 91, 40, 0.15) !important;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.spec-label {
+  color: var(--aur-text-muted) !important;
+  font-weight: 500 !important;
+}
+
+.spec-value {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500 !important;
+}
+
+/* Signature Bottle Frame & Controlled Studio Lighting */
+.bottle-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signature-bottle-img {
+  will-change: transform, opacity;
+  filter: drop-shadow(0 25px 40px rgba(31, 28, 24, 0.28));
+  transition: transform 0.12s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.halo-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at 50% 50%, rgba(184, 134, 74, 0.32) 0%, rgba(126, 91, 40, 0.10) 45%, transparent 70%) !important;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform, opacity;
+  transition: transform 0.2s ease-out, opacity 0.3s ease;
+}
+
+/* Hairlines */
+.gold-hairline,
+.gold-hairline-center,
+.gold-hairline-left {
+  background: linear-gradient(90deg, transparent 0%, var(--aur-accent-gold) 50%, transparent 100%) !important;
+  opacity: 0.65;
+  height: 1px;
+}
+
+/* -----------------------------------------------------------------------------
+   7. FRAGRANCE NOTES ARCHITECTURE
+   ----------------------------------------------------------------------------- */
+.notes-tab-btn {
+  background: rgba(250, 247, 240, 0.75) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  color: var(--aur-text-secondary) !important;
+  transition: all var(--trans-smooth);
+}
+.notes-tab-btn .tab-step {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600;
+}
+.notes-tab-btn .tab-name {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+.notes-tab-btn:hover {
+  background: var(--aur-bg-card) !important;
+  border-color: var(--aur-accent-gold) !important;
+  transform: translateY(-2px);
+}
+.notes-tab-btn.active {
+  background: var(--aur-text-primary) !important;
+  border-color: var(--aur-text-primary) !important;
+  box-shadow: 0 8px 24px rgba(31, 28, 24, 0.22);
+}
+.notes-tab-btn.active .tab-step {
+  color: #D4C5B0 !important;
+}
+.notes-tab-btn.active .tab-name {
+  color: #FAF7F0 !important;
+}
+
+.notes-panel {
+  background: var(--aur-bg-card) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  box-shadow: 0 20px 48px rgba(31, 28, 24, 0.08);
+}
+.note-tier-badge {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600 !important;
+}
+.note-elements {
+  color: var(--aur-text-primary) !important;
+}
+.note-character {
+  color: var(--aur-text-secondary) !important;
+  font-style: italic;
+  font-weight: 400;
+}
+.sensory-tag {
+  background: rgba(250, 247, 240, 0.85) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  color: var(--aur-text-secondary) !important;
+  font-weight: 500;
+}
+
+.pyramid-editorial-grid {
+  border-top: 1px solid var(--aur-border-subtle);
+  border-bottom: 1px solid var(--aur-border-subtle);
+}
+.pyramid-level {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600;
+}
+.pyramid-title {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+.pyramid-sub {
+  color: var(--aur-text-muted) !important;
+}
+
+/* -----------------------------------------------------------------------------
+   8. THE AURELIS COLLECTION SECTION
+   ----------------------------------------------------------------------------- */
+.concept-badge-pill {
+  background: rgba(250, 247, 240, 0.9) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  color: var(--aur-text-secondary) !important;
+  font-weight: 500;
+}
+.concept-pip {
+  background: var(--aur-accent-gold) !important;
+}
+
+.collection-stage {
+  background: var(--aur-bg-card) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  box-shadow: 0 25px 60px -15px rgba(31, 28, 24, 0.12) !important;
+}
+
+.collection-btn {
+  background: rgba(250, 247, 240, 0.75) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  transition: all var(--trans-smooth);
+}
+.collection-btn .btn-edition {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600;
+}
+.collection-btn .btn-name {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+.collection-btn .btn-profile {
+  color: var(--aur-text-muted) !important;
+}
+.collection-btn:hover {
+  border-color: var(--aur-accent-gold) !important;
+  background: var(--aur-bg-card) !important;
+  transform: translateY(-2px);
+}
+.collection-btn.active {
+  background: var(--aur-text-primary) !important;
+  border-color: var(--aur-text-primary) !important;
+  box-shadow: 0 10px 25px rgba(31, 28, 24, 0.22);
+}
+.collection-btn.active .btn-edition {
+  color: #D4C5B0 !important;
+}
+.collection-btn.active .btn-name {
+  color: #FAF7F0 !important;
+}
+.collection-btn.active .btn-profile {
+  color: #E8DECF !important;
+}
+
+.stage-edition {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600;
+}
+.stage-title {
+  color: var(--aur-text-primary) !important;
+}
+.stage-concentration {
+  color: var(--aur-text-secondary) !important;
+  font-weight: 500;
+}
+.stage-desc {
+  color: var(--aur-text-body) !important;
+}
+.matrix-row {
+  border-bottom: 1px solid rgba(126, 91, 40, 0.12) !important;
+}
+.matrix-label {
+  color: var(--aur-text-muted) !important;
+  font-weight: 500;
+}
+.matrix-val {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+.presentation-note {
+  color: var(--aur-text-muted) !important;
+}
+
+.stage-bottle-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collection-bottle-img {
+  will-change: transform, opacity;
+  filter: drop-shadow(0 20px 35px rgba(31, 28, 24, 0.25));
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* -----------------------------------------------------------------------------
+   9. CAMPAIGN VIDEO THEATRE
+   ----------------------------------------------------------------------------- */
+.campaign-status-pill {
+  background: rgba(250, 247, 240, 0.9) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+.campaign-status-pill .status-dot {
+  background: var(--aur-accent-gold) !important;
+}
+
+.video-container {
+  box-shadow: 0 30px 70px rgba(31, 28, 24, 0.22) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+}
+
+.film-footnote p {
+  color: var(--aur-text-muted) !important;
+}
+
+/* -----------------------------------------------------------------------------
+   10. EDITORIAL & CRAFTSMANSHIP ARCHIVE & SOCIAL SUITE
+   ----------------------------------------------------------------------------- */
+.gallery-card {
+  background: var(--aur-bg-surface) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  box-shadow: var(--box-shadow-card);
+  transition: transform var(--trans-smooth), box-shadow var(--trans-smooth), border-color var(--trans-smooth);
+}
+.gallery-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--aur-accent-gold) !important;
+  box-shadow: var(--box-shadow-card-hover) !important;
+}
+.gallery-card .gallery-img {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-card:hover .gallery-img {
+  transform: scale(1.025);
+}
+
+.social-card {
+  background: var(--aur-bg-surface) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  box-shadow: var(--box-shadow-card);
+  transition: all var(--trans-smooth);
+}
+.social-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--aur-accent-gold) !important;
+  box-shadow: var(--box-shadow-card-hover);
+}
+
+.social-board-badge {
+  background: rgba(250, 247, 240, 0.85) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+  transition: all var(--trans-fast);
+}
+.social-board-badge:hover {
+  background: var(--aur-text-primary) !important;
+  color: var(--aur-bg-ivory) !important;
+  border-color: var(--aur-text-primary) !important;
+  transform: translateY(-2px);
+}
+
+.social-ratio-pill {
+  background: rgba(31, 28, 24, 0.75) !important;
+  color: #FAF7F0 !important;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+}
+
+.master-plates-strip {
+  border-top: 1px solid var(--aur-border-subtle);
+  border-bottom: 1px solid var(--aur-border-subtle);
+}
+.strip-header .strip-title {
+  color: var(--aur-text-primary) !important;
+}
+.strip-item {
+  background: var(--aur-bg-surface) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  transition: all var(--trans-fast);
+}
+.strip-item:hover {
+  background: var(--aur-bg-card-hover) !important;
+  border-color: var(--aur-accent-gold) !important;
+  transform: translateY(-2px);
+}
+.strip-item .plate-index {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600;
+}
+.strip-item .plate-name {
+  color: var(--aur-text-primary) !important;
+  font-weight: 500;
+}
+
+/* -----------------------------------------------------------------------------
+   11. FINAL CTA SECTION
+   ----------------------------------------------------------------------------- */
+.cta-brand-sub {
+  color: var(--aur-accent-gold) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.4em !important;
+}
+
+.cta-brand-title {
+  color: var(--aur-text-primary) !important;
+  text-shadow: none !important;
+}
+
+.cta-quote {
+  color: var(--aur-text-secondary) !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+/* -----------------------------------------------------------------------------
+   12. HIGH-CONTRAST LUXURY BUTTONS
+   ----------------------------------------------------------------------------- */
+.btn-primary {
+  background: var(--aur-text-primary) !important;
+  color: var(--aur-bg-ivory) !important;
+  border: 1px solid var(--aur-text-primary) !important;
+  box-shadow: 0 8px 24px -6px rgba(31, 28, 24, 0.28);
+  font-weight: 500;
+  transition: all var(--trans-smooth);
+}
+.btn-primary:hover {
+  background: #352F28 !important;
+  border-color: #352F28 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -6px rgba(31, 28, 24, 0.35);
+}
+.btn-primary:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-secondary {
+  background: rgba(250, 247, 240, 0.85) !important;
+  color: var(--aur-text-primary) !important;
+  border: 1px solid var(--aur-border-warm) !important;
+  backdrop-filter: blur(6px);
+  font-weight: 500;
+  transition: all var(--trans-smooth);
+}
+.btn-secondary:hover {
+  background: var(--aur-bg-card) !important;
+  border-color: var(--aur-accent-gold) !important;
+  color: var(--aur-text-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(31, 28, 24, 0.08);
+}
+.btn-secondary:hover .btn-arrow {
+  transform: translateY(-3px);
+}
+
+/* -----------------------------------------------------------------------------
+   13. PIXIVO RETURN PATH LINKS
+   ----------------------------------------------------------------------------- */
+.nav-pixivo-return-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--aur-text-secondary);
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--aur-border-warm);
+  border-radius: 999px;
+  background: rgba(250, 247, 240, 0.65);
+  transition: all var(--trans-fast);
+}
+.nav-pixivo-return-link:hover {
+  color: var(--aur-text-primary);
+  border-color: var(--aur-accent-gold);
+  background: var(--aur-bg-card);
+  transform: translateX(-2px);
+}
+.nav-pixivo-return-link .return-arrow {
+  transition: transform var(--trans-fast);
+}
+.nav-pixivo-return-link:hover .return-arrow {
+  transform: translateX(-3px);
+}
+
+.mobile-pixivo-return {
+  color: var(--aur-accent-gold) !important;
+  border-bottom: 1px solid var(--aur-border-subtle);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-return-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color var(--trans-fast);
+}
+.footer-return-link:hover {
+  color: #FAF7F0;
+}
+
+/* -----------------------------------------------------------------------------
+   14. SCROLL REVEAL ANIMATIONS (COORDINATED & FOOLPROOF)
+   ----------------------------------------------------------------------------- */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-element.revealed,
+.reveal-element.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* No-JS & Preloader Fallback Guarantee */
+.no-js .reveal-element {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* -----------------------------------------------------------------------------
+   15. AMBIENT CURSOR-FOLLOW LIGHT (DESKTOP ONLY)
+   ----------------------------------------------------------------------------- */
+.aur-ambient-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle, rgba(184, 134, 74, 0.10) 0%, rgba(241, 233, 220, 0) 70%);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+  will-change: transform;
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .aur-ambient-cursor {
+    display: none !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   16. REDUCED MOTION SAFETY OVERRIDE
+   ----------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .aur-ambient-cursor {
+    display: none !important;
+  }
+  .reveal-element {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-bottle-img,
+  .signature-bottle-img,
+  .collection-bottle-img,
+  .gallery-card,
+  .gallery-img {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   17. MOBILE RESPONSIVENESS & OVERFLOW GUARDS
+   ----------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero-bottle-img {
+    animation: none !important; /* Save battery and stabilize viewport on mobile */
+    filter: drop-shadow(0 15px 25px rgba(31, 28, 24, 0.22));
+  }
+  .signature-bottle-img {
+    transform: none !important;
+  }
+  .specs-box {
+    padding: 1.5rem 1.25rem !important;
+  }
+  .hero-brand {
+    font-size: clamp(2.4rem, 11vw, 4.2rem) !important;
+  }
+}

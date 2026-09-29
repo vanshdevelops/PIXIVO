@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="monogramGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFD2BD" />
+      <stop offset="50%" stop-color="#CBB99F" />
+      <stop offset="100%" stop-color="#9E8D72" />
+    </linearGradient>
+    <style>
+      .mono-stroke {
+        fill: none;
+        stroke: url(#monogramGold);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .mono-fill {
+        fill: url(#monogramGold);
+      }
+    </style>
+  </defs>
+
+  <!-- Architectural 'A' Monogram with Prismatic Core -->
+  <g transform="translate(200, 200)">
+    <!-- Outer Precision Circle (Optional Framing Accent) -->
+    <circle cx="0" cy="0" r="168" fill="none" stroke="url(#monogramGold)" stroke-width="2.5" stroke-opacity="0.35" />
+    <circle cx="0" cy="0" r="156" fill="none" stroke="url(#monogramGold)" stroke-width="1" stroke-opacity="0.2" />
+
+    <!-- Left Architectural Apex Leg (Heavy Serif Base) -->
+    <path d="M-10, -96 L-74, 92 L-94, 92 L-94, 102 L-42, 102 L-42, 92 L-62, 92 L-10, -56 Z" 
+          fill="url(#monogramGold)" />
+
+    <!-- Right Architectural Apex Leg (Slender Refined Stroke) -->
+    <path d="M-10, -96 L74, 92 L54, 92 L54, 102 L106, 102 L106, 92 L86, 92 L2, -96 Z" 
+          fill="url(#monogramGold)" />
+
+    <!-- Apex Finial / Serif Cap -->
+    <path d="M-22, -94 L22, -94 L22, -104 L-22, -104 Z" fill="url(#monogramGold)" />
+
+    <!-- Horizontal Crossbeam with Central Prismatic Opening -->
+    <path d="M-48, 28 L-14, 28 L-14, 34 L-46, 34 Z" fill="url(#monogramGold)" />
+    <path d="M14, 28 L48, 28 L46, 34 L14, 34 Z" fill="url(#monogramGold)" />
+
+    <!-- Suspended Scent Essence / Crystal Prism Diamond -->
+    <polygon points="0,12 12,31 0,50 -12,31" fill="url(#monogramGold)" opacity="0.95" />
+    <circle cx="0" cy="31" r="2.5" fill="#0B0B0C" />
+  </g>
+</svg>

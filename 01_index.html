@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIXIVO — AI-Powered Digital Experiences for Ambitious Brands</title>
+  <meta name="description" content="PIXIVO creates premium websites, brand identities, AI-powered advertisements and digital experiences for emerging brands.">
+  <meta name="keywords" content="creative agency, web design, brand identity, AI advertising, logo animation, product launch creatives, UI UX, digital experience">
+  <meta name="author" content="PIXIVO">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pixivo.org/">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pixivo.org/">
+  <meta property="og:title" content="PIXIVO — AI-Powered Digital Experiences for Ambitious Brands">
+  <meta property="og:description" content="PIXIVO creates premium websites, brand identities, AI-powered advertisements and digital experiences for emerging brands.">
+  <meta property="og:image" content="https://pixivo.org/assets/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://pixivo.org/">
+  <meta name="twitter:title" content="PIXIVO — AI-Powered Digital Experiences for Ambitious Brands">
+  <meta name="twitter:description" content="PIXIVO creates premium websites, brand identities, AI-powered advertisements and digital experiences for emerging brands.">
+  <meta name="twitter:image" content="https://pixivo.org/assets/og-image.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Typography: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!--
+    PIXIVO GOOGLE ANALYTICS PLACEHOLDER
+    Replace G-XXXXXXXXXX with the real GA4 Measurement ID after creating the property in Google Analytics.
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+  -->
+  <!-- JSON-LD Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PIXIVO",
+    "url": "https://pixivo.org/",
+    "logo": "https://pixivo.org/assets/logo.png",
+    "description": "Creative & Digital Experience Agency crafting websites, visual identities, and AI motion for modern brands.",
+    "email": "connect.pixivo@gmail.com",
+    "sameAs": [
+      "https://www.instagram.com/heypixivo/"
+    ]
+  }
+  </script>
+</head>
+<body class="pixivo-body">
+
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <!-- Custom Cursor Element (Desktop only) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Loading / Splash Screen (Section 8) -->
+  <div id="splash-screen" class="splash-screen" role="status" aria-label="Loading PIXIVO experience">
+    <div class="splash-content">
+      <div class="splash-logo-container">
+        <div class="splash-glow" aria-hidden="true"></div>
+        <div class="splash-cubes" aria-hidden="true">
+          <span class="splash-cube cube-c1"></span>
+          <span class="splash-cube cube-c2"></span>
+          <span class="splash-cube cube-c3"></span>
+          <span class="splash-cube cube-c4"></span>
+        </div>
+        <img src="assets/logo.png" alt="PIXIVO Logo" class="splash-logo-img" width="130" height="130" onerror="this.onerror=null; this.src='assets/logo.svg';">
+      </div>
+      <div class="splash-brand-text">
+        <span class="splash-brand-name">PIXIVO</span>
+        <span class="splash-tagline">WHERE VISION MEETS MOTION</span>
+      </div>
+      <div class="splash-progress-bar">
+        <div class="splash-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Urgency Discount Announcement Bar (Section 20 & 40) -->
+  <aside id="discount-banner" class="discount-banner" role="region" aria-label="Special Offer">
+    <div class="container banner-inner">
+      <div class="banner-badge">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span class="banner-badge-text">LIMITED TIME</span>
+      </div>
+      <p class="banner-text">
+        <strong>NEW CLIENT INTRODUCTORY OFFER</strong> — 25% OFF SELECTED SERVICES
+      </p>
+      <a href="#pricing" class="banner-link">Claim Discount &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Sticky / Fixed Header & Navigation (Section 9, 10, 11) -->
+  <header id="site-header" class="site-header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="#home" class="brand-logo-link" aria-label="PIXIVO home">
+        <div class="logo-wrapper">
+          <picture>
+            <source srcset="assets/logo.webp" type="image/webp">
+            <img src="assets/logo.png" alt="PIXIVO logo" class="brand-logo" width="44" height="44" onerror="this.onerror=null; this.src='assets/logo.svg';">
+          </picture>
+          <div class="logo-fallback-text" style="display:none;">PIXIVO</div>
+        </div>
+        <span class="brand-name">PIXIVO</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-action">
+        <a href="#contact" class="btn btn-primary btn-header">Get Started</a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation (Section 11) -->
+  <div id="mobile-nav" class="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <div class="brand-logo-link">
+          <img src="assets/logo.png" alt="PIXIVO logo" class="brand-logo" width="36" height="36">
+          <span class="brand-name">PIXIVO</span>
+        </div>
+        <button id="mobile-nav-close" class="mobile-nav-close-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#portfolio" class="mobile-nav-link">Portfolio</a></li>
+        <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <a href="#contact" class="btn btn-primary btn-block mobile-cta">Get Started</a>
+        <div class="mobile-nav-social">
+          <a href="https://www.instagram.com/heypixivo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <span class="separator">&bull;</span>
+          <a href="mailto:connect.pixivo@gmail.com">connect.pixivo@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- HERO SECTION (Section 12, 13, 14, 15) -->
+    <section id="home" class="hero-section">
+      <!-- Ambient Geometric Particles & Floating Cubes (Derived from official logo) -->
+      <div class="hero-ambient-canvas" id="hero-ambient-canvas" aria-hidden="true">
+        <div class="ambient-glow glow-cyan"></div>
+        <div class="ambient-glow glow-purple"></div>
+        <div class="ambient-glow glow-magenta"></div>
+
+        <!-- Floating 3D squares matching official logo cubes with staggered animations -->
+        <div class="floating-cube cube-1" style="--duration: 8s; --x: 15%; --y: 20%; --size: 18px;"></div>
+        <div class="floating-cube cube-2" style="--duration: 11s; --x: 75%; --y: 15%; --size: 26px;"></div>
+        <div class="floating-cube cube-3" style="--duration: 9s; --x: 85%; --y: 65%; --size: 20px;"></div>
+        <div class="floating-cube cube-4" style="--duration: 13s; --x: 45%; --y: 75%; --size: 14px;"></div>
+        <div class="floating-cube cube-5" style="--duration: 7s; --x: 60%; --y: 35%; --size: 22px;"></div>
+        <div class="floating-cube cube-6" style="--duration: 10s; --x: 25%; --y: 70%; --size: 16px;"></div>
+        <div class="floating-cube cube-7" style="--duration: 12s; --x: 90%; --y: 40%; --size: 30px;"></div>
+
+        <!-- P-Shaped Light Trail SVG Path Animation (Section 15) -->
+        <svg class="p-light-trail-svg" viewBox="0 0 800 600" fill="none" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="p-trail-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+              <stop offset="35%" stop-color="#4361ee" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#8338ec" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#f72585" stop-opacity="0.8"/>
+            </linearGradient>
+            <filter id="trail-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <path class="p-path-anim" d="M260 480 L260 220 C260 140 340 120 440 120 C540 120 620 170 620 260 C620 350 530 380 430 380 L260 380" stroke="url(#p-trail-grad)" stroke-width="3" stroke-linecap="round" filter="url(#trail-glow)" />
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content" data-reveal="fade-up">
+          <!-- Tagline Badge -->
+          <div class="hero-badge">
+            <span class="badge-sparkle">&#10022;</span>
+            <span class="badge-text" data-edit-key="hero_badge">WHERE VISION MEETS MOTION</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="hero-headline" data-edit-key="hero_headline">
+            We Craft <span class="gradient-text">Digital Experiences</span> That Convert
+          </h1>
+
+          <!-- Hero Subheadline -->
+          <p class="hero-subheadline" data-edit-key="hero_subheadline">
+            PIXIVO creates premium websites, visual identities, AI-powered advertising, motion graphics and digital experiences designed to make ambitious brands impossible to ignore.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary btn-lg">
+              <span>View Our Work</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#pricing" class="btn btn-secondary btn-lg">
+              <span>Claim 25% New Customer Discount</span>
+            </a>
+          </div>
+
+          <!-- Floating Service Badges (Section 12) -->
+          <div class="hero-service-badges" aria-label="Core Agency Disciplines">
+            <div class="service-pill" data-float-delay="0s">
+              <span class="pill-dot dot-cyan"></span>
+              <span>Brand Websites</span>
+            </div>
+            <div class="service-pill" data-float-delay="1.2s">
+              <span class="pill-dot dot-blue"></span>
+              <span>Premium Logos</span>
+            </div>
+            <div class="service-pill" data-float-delay="0.6s">
+              <span class="pill-dot dot-purple"></span>
+              <span>AI Ads</span>
+            </div>
+            <div class="service-pill" data-float-delay="1.8s">
+              <span class="pill-dot dot-magenta"></span>
+              <span>Motion</span>
+            </div>
+            <div class="service-pill" data-float-delay="0.9s">
+              <span class="pill-dot dot-cyan"></span>
+              <span>Social Media</span>
+            </div>
+            <div class="service-pill" data-float-delay="1.5s">
+              <span class="pill-dot dot-gold"></span>
+              <span>AI Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Ambient Visual (Right Side Desktop) (Section 13) -->
+        <div class="hero-visual-wrapper" data-reveal="scale-in">
+          <div class="hero-visual-card">
+            <div class="visual-card-glow" aria-hidden="true"></div>
+            <!-- Large Official Logo in Hero 3D Display -->
+            <div class="hero-logo-showcase">
+              <div class="logo-orbit-ring" aria-hidden="true"></div>
+              <img src="assets/logo.png" alt="PIXIVO Master Logo Symbol" class="hero-master-logo" width="340" height="340" onerror="this.onerror=null; this.src='assets/logo.svg';">
+              <!-- Decorative Logo Floating Cubes (Reflecting logo DNA) -->
+              <div class="hero-logo-cubes" aria-hidden="true">
+                <span class="cube-orbit cube-orbit-1"></span>
+                <span class="cube-orbit cube-orbit-2"></span>
+                <span class="cube-orbit cube-orbit-3"></span>
+              </div>
+            </div>
+
+            <!-- Interactive Metric Glass Card -->
+            <div class="hero-glass-stat stat-1">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="hero-glass-stat stat-2">
+              <span class="stat-number">1+</span>
+              <span class="stat-label">Month Building Brands</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#services" class="hero-scroll-down" aria-label="Scroll down to services">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-text">Explore Systems</span>
+      </a>
+    </section>
+
+    <!-- SERVICES SECTION (Section 18, 59) -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <div class="section-badge">AGENCY CAPABILITIES</div>
+          <h2 class="section-heading" data-edit-key="services_heading">What We Create</h2>
+          <p class="section-subheading" data-edit-key="services_subheading">
+            From identity to interaction, PIXIVO builds the visual and digital systems modern brands need to stand out.
+          </p>
+          <div class="services-availability-tag">
+            <span>&#10003; Available Individually</span>
+            <span class="tag-sep">&bull;</span>
+            <span>&#10003; Available in High-Value Packages</span>
+          </div>
+        </div>
+
+        <!-- 8 Service Cards Grid -->
+        <div class="services-grid" id="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.1">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Brand Websites</h3>
+            <p class="service-description">Landing pages and responsive corporate websites engineered for lightning performance, immaculate aesthetics, and conversion architecture.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹4,999</span>
+              <a href="#pricing" class="service-action-link" data-service-select="Brand Websites">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.2">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Premium Logos</h3>
+            <p class="service-description">Bespoke geometric visual marks, color harmonies, and timeless vector brand identity systems that instantly establish category leadership.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹299</span>
+              <a href="#pricing" class="service-action-link" data-service-select="Premium Logos">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.3">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <h3 class="service-title">AI Product Advertisements</h3>
+            <p class="service-description">Cinematic 10-second ads and high-converting vertical reels powered by cutting-edge neural generative tools and studio color grading.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹799</span>
+              <a href="#pricing" class="service-action-link" data-service-select="AI Product Advertisements">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.4">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-title">Logo Animation</h3>
+            <p class="service-description">Dynamic 3D &amp; 2D motion idents, UI splash signatures, and fluid video stingers that bring your brand mark into living motion.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹499</span>
+              <a href="#pricing" class="service-action-link" data-service-select="Logo Animation">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.5">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Product Launch Creatives</h3>
+            <p class="service-description">Full-funnel teaser assets, key art banners, countdown visual suites, and hero promotional creative suites built for launch day impact.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹999</span>
+              <a href="#pricing" class="service-action-link" data-service-select="Product Launch Creatives">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.6">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Social Media Posts &amp; Posters</h3>
+            <p class="service-description">High-impact static &amp; carousel visual designs tailored for Instagram, LinkedIn, and X that stop the scroll and build brand equity.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹399</span>
+              <a href="#pricing" class="service-action-link" data-service-select="Social Media Posts & Posters">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.7">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Social Media Page Handling</h3>
+            <p class="service-description">Complete channel curation: aesthetic grid planning, scheduled creative rollouts, story sequencing, and ongoing visual refinement.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹1,599</span>
+              <a href="#pricing" class="service-action-link" data-service-select="Social Media Page Handling">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 8 -->
+          <div class="service-card" data-reveal="fade-up" data-delay="0.8">
+            <div class="card-border-glow"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                <path d="M12 12 2.1 10.5"></path>
+                <path d="M12 12V22"></path>
+                <path d="M12 12 21.9 13.5"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">AI-Powered Customer Experience</h3>
+            <p class="service-description">Bespoke conversational flows, intelligent lead-qualifiers, and AI-driven interactive interfaces that guide prospects from interest to checkout.</p>
+            <div class="service-footer">
+              <span class="service-price-tag">From ₹499</span>
+              <a href="#pricing" class="service-action-link" data-service-select="AI-Powered Customer Experience">
+                <span>View Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION (Section 19) -->
+    <section id="portfolio" class="section portfolio-section">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <div class="section-badge">CASE ARCHIVES</div>
+          <h2 class="section-heading" data-edit-key="portfolio_heading">Selected Work</h2>
+          <p class="section-subheading" data-edit-key="portfolio_subheading">
+            A curated selection of digital experiences, visual marks, and launch campaigns crafted for high-growth visionaries.
+          </p>
+
+          <!-- Filter Category Pills -->
+          <div class="portfolio-filter-tabs" role="tablist" aria-label="Filter portfolio categories">
+            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-tab" data-filter="web-design" role="tab" aria-selected="false">Web Design</button>
+            <button class="filter-tab" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+            <button class="filter-tab" data-filter="animation" role="tab" aria-selected="false">Animation</button>
+            <button class="filter-tab" data-filter="social-media" role="tab" aria-selected="false">Social Media</button>
+            <button class="filter-tab" data-filter="ai-ads" role="tab" aria-selected="false">AI Ads</button>
+            <button class="filter-tab" data-filter="product-launch" role="tab" aria-selected="false">Product Launch</button>
+          </div>
+        </div>
+
+        <!-- FLAGSHIP FEATURED CASE STUDY (AURELIS) -->
+        <div class="portfolio-flagship-showcase" data-category="branding web-design ai-ads" data-reveal="fade-up">
+          <div class="flagship-card">
+            <div class="flagship-visual-col">
+              <a href="./projects/aurelis/index.html" class="flagship-thumb-link" aria-label="View AURELIS Flagship Case Study">
+                <div class="flagship-thumb-wrapper">
+                  <img src="./projects/aurelis/assets/product/noir-eclat-hero.webp" 
+                       alt="AURELIS NOIR ÉCLAT luxury fragrance concept by PIXIVO" 
+                       class="flagship-hero-img" 
+                       loading="lazy" 
+                       width="800" 
+                       height="1000">
+                  <div class="flagship-badge-pill">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    <span>FLAGSHIP CONCEPT</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="flagship-content-col">
+              <div class="flagship-meta-top">
+                <span class="flagship-status-tag">SELF-INITIATED CONCEPT</span>
+                <span class="meta-divider" aria-hidden="true">·</span>
+                <span class="flagship-year">2026</span>
+              </div>
+              <h3 class="flagship-title">AURELIS</h3>
+              <p class="flagship-descriptor">THE ART OF SCENT</p>
+              <div class="flagship-categories">
+                <span class="cat-pill">BRAND IDENTITY</span>
+                <span class="cat-pill">ART DIRECTION</span>
+                <span class="cat-pill">DIGITAL EXPERIENCE</span>
+              </div>
+              <p class="flagship-desc">
+                A complete luxury fragrance world developed from identity and product architecture through campaign, digital experience and cinematic storytelling.
+              </p>
+              <div class="flagship-actions">
+                <a href="./projects/aurelis/index.html" class="btn btn-primary btn-flagship" aria-label="View AURELIS Case Study">
+                  <span>View Case Study</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <span class="flagship-spec-note">Haute Parfumerie · 4-Shot AI Commercial Master</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Items Grid -->
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Projects will be dynamically rendered and enriched by script.js with fallback content -->
+          <button type="button" class="portfolio-item" data-category="web-design" data-project-id="1" aria-haspopup="dialog" aria-label="View Nova Coffee case study">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/portfolio/project-1.jpg" alt="Nova Coffee Web Design Concept" loading="lazy" width="800" height="500">
+                <div class="portfolio-overlay">
+                  <span class="view-case-btn">View Case Study &rarr;</span>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">Web Design &amp; E-Commerce · Concept Project</span>
+                <h3 class="portfolio-title">Nova Coffee</h3>
+              </div>
+            </div>
+          </button>
+
+          <button type="button" class="portfolio-item" data-category="branding" data-project-id="2" aria-haspopup="dialog" aria-label="View Aurelia case study">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/portfolio/project-2.jpg" alt="Aurelia Brand Identity Concept" loading="lazy" width="800" height="500">
+                <div class="portfolio-overlay">
+                  <span class="view-case-btn">View Case Study &rarr;</span>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">Luxury Brand Identity · Concept Project</span>
+                <h3 class="portfolio-title">Aurelia</h3>
+              </div>
+            </div>
+          </button>
+
+          <button type="button" class="portfolio-item" data-category="ai-ads" data-project-id="3" aria-haspopup="dialog" aria-label="View Vanta AI case study">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/portfolio/project-3.jpg" alt="Vanta AI Product Advertisement Concept" loading="lazy" width="800" height="500">
+                <div class="portfolio-overlay">
+                  <span class="view-case-btn">View Case Study &rarr;</span>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">AI Product Advertisement · Concept Project</span>
+                <h3 class="portfolio-title">Vanta AI</h3>
+              </div>
+            </div>
+          </button>
+
+          <button type="button" class="portfolio-item" data-category="social-media" data-project-id="4" aria-haspopup="dialog" aria-label="View Luma Sound case study">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/portfolio/project-4.jpg" alt="Luma Sound Social Media Concept" loading="lazy" width="800" height="500">
+                <div class="portfolio-overlay">
+                  <span class="view-case-btn">View Case Study &rarr;</span>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">Social Media Campaign · Concept Project</span>
+                <h3 class="portfolio-title">Luma Sound</h3>
+              </div>
+            </div>
+          </button>
+
+          <button type="button" class="portfolio-item" data-category="animation" data-project-id="5" aria-haspopup="dialog" aria-label="View Axiom Pay case study">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/portfolio/project-5.jpg" alt="Axiom Pay Logo Animation Concept" loading="lazy" width="800" height="500">
+                <div class="portfolio-overlay">
+                  <span class="view-case-btn">View Case Study &rarr;</span>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">3D Motion &amp; Logo System · Concept Project</span>
+                <h3 class="portfolio-title">Axiom Pay</h3>
+              </div>
+            </div>
+          </button>
+
+          <button type="button" class="portfolio-item" data-category="product-launch" data-project-id="6" aria-haspopup="dialog" aria-label="View Nexa Mobility case study">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/portfolio/project-6.jpg" alt="Nexa Mobility Product Launch Concept" loading="lazy" width="800" height="500">
+                <div class="portfolio-overlay">
+                  <span class="view-case-btn">View Case Study &rarr;</span>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">Product Launch Creatives · Concept Project</span>
+                <h3 class="portfolio-title">Nexa Mobility</h3>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY MODAL (Section 19) -->
+    <div id="case-study-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      <div class="modal-container">
+        <button id="modal-close-btn" class="modal-close" aria-label="Close case study">&times;</button>
+        <div class="modal-body" id="modal-body-content">
+          <!-- Dynamic Content Injected via script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING SECTION (Section 20, 21, 22, 23, 24) -->
+    <section id="pricing" class="section pricing-section">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <div class="section-badge">TRANSPARENT VALUE</div>
+          <h2 class="section-heading">Investment &amp; Packages</h2>
+          <p class="section-subheading">
+            Clear, honest pricing with structured milestone delivery. No hidden surcharges or surprise billing.
+          </p>
+
+          <!-- Toggle: Individual Services vs. Package Deals (Section 23) -->
+          <div class="pricing-toggle-wrapper">
+            <span class="toggle-label" id="label-individual">Individual Services</span>
+            <button id="pricing-toggle-switch" class="pricing-toggle-btn" role="switch" aria-checked="false" aria-labelledby="label-packages">
+              <span class="toggle-slider"></span>
+            </button>
+            <span class="toggle-label" id="label-packages">Package Deals <span class="highlight-badge">Save More</span></span>
+          </div>
+        </div>
+
+        <!-- INDIVIDUAL SERVICES VIEW (Default) -->
+        <div id="individual-pricing-view" class="pricing-view active">
+          <div class="pricing-individual-grid" id="individual-services-cards">
+            <!-- Rendered dynamically by script.js with initial SSR-friendly cards -->
+          </div>
+        </div>
+
+        <!-- PACKAGE DEALS VIEW -->
+        <div id="packages-pricing-view" class="pricing-view">
+          <div class="packages-grid">
+            <!-- STARTER PACKAGE -->
+            <div class="package-card" data-reveal="fade-up" data-delay="0.1">
+              <div class="package-badge">STARTER</div>
+              <h3 class="package-title">Starter Identity &amp; Web</h3>
+              <p class="package-desc">Ideal for emerging startups, boutiques, and creators launching their digital footprint.</p>
+              
+              <div class="package-pricing">
+                <span class="pkg-original-price">₹7,999</span>
+                <span class="pkg-discount-price">₹5,999</span>
+                <span class="pkg-offer-tag">New Customer Offer</span>
+              </div>
+
+              <ul class="package-features">
+                <li><span class="check">&#10003;</span> Complete Brand Website (3–4 Sections)</li>
+                <li><span class="check">&#10003;</span> Premium Vector Logo &amp; Color System</li>
+                <li><span class="check">&#10003;</span> 5 High-Impact Social Media Creatives</li>
+                <li><span class="check">&#10003;</span> 2D/3D Logo Animation Ident</li>
+                <li><span class="check">&#10003;</span> Mobile &amp; SEO Optimization</li>
+              </ul>
+
+              <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="Starter">Select Starter</a>
+            </div>
+
+            <!-- PROFESSIONAL PACKAGE (RECOMMENDED) -->
+            <div class="package-card featured" data-reveal="fade-up" data-delay="0.2">
+              <div class="popular-ribbon">RECOMMENDED CHOICE</div>
+              <div class="package-badge badge-glow">PROFESSIONAL</div>
+              <h3 class="package-title">Growth Brand Experience</h3>
+              <p class="package-desc">The complete powerhouse creative engine designed to dominate market attention.</p>
+              
+              <div class="package-pricing">
+                <span class="pkg-original-price">₹13,332</span>
+                <span class="pkg-discount-price">₹9,999</span>
+                <span class="pkg-offer-tag">Save 25% Today</span>
+              </div>
+
+              <ul class="package-features">
+                <li><span class="check">&#10003;</span> Full Multi-Section Brand Website &amp; CMS Structure</li>
+                <li><span class="check">&#10003;</span> Premium Logo Suite &amp; Complete Brand Guidelines</li>
+                <li><span class="check">&#10003;</span> High-Definition 3D Logo Animation Ident</li>
+                <li><span class="check">&#10003;</span> AI Product Video Ad (10s Reel / Promo)</li>
+                <li><span class="check">&#10003;</span> 10 Bespoke Social Media Creatives</li>
+                <li><span class="check">&#10003;</span> Product Launch Visual Creative Suite</li>
+                <li><span class="check">&#10003;</span> Basic Social Media Handling &amp; Strategy</li>
+                <li><span class="check">&#10003;</span> 30 Days Post-Launch Support</li>
+              </ul>
+
+              <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Professional">Select Professional</a>
+            </div>
+
+            <!-- ENTERPRISE PACKAGE -->
+            <div class="package-card" data-reveal="fade-up" data-delay="0.3">
+              <div class="package-badge">ENTERPRISE</div>
+              <h3 class="package-title">Custom Ecosystem</h3>
+              <p class="package-desc">Tailored high-end creative direction for scaling enterprises and funded ventures.</p>
+              
+              <div class="package-pricing">
+                <span class="pkg-custom-quote">Custom Quote</span>
+                <span class="pkg-offer-tag">Tailored Scope</span>
+              </div>
+
+              <ul class="package-features">
+                <li><span class="check">&#10003;</span> Bespoke Architecture &amp; Interactive Web Systems</li>
+                <li><span class="check">&#10003;</span> Global Brand Identity &amp; Design Token Architecture</li>
+                <li><span class="check">&#10003;</span> Multiple AI Video Advertisements &amp; Reels</li>
+                <li><span class="check">&#10003;</span> 3D Motion Identity &amp; Product Visuals</li>
+                <li><span class="check">&#10003;</span> End-to-End Product Launch Campaign</li>
+                <li><span class="check">&#10003;</span> Complete Social Media Management &amp; Analytics</li>
+                <li><span class="check">&#10003;</span> AI-Powered Customer Experience Integration</li>
+                <li><span class="check">&#10003;</span> Dedicated Art Director &amp; Priority SLA</li>
+              </ul>
+
+              <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="Enterprise">Request Custom Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEBSITE MAINTENANCE & CUSTOMIZATION NOTICE (Section 22) -->
+        <div class="maintenance-box" data-reveal="fade-up">
+          <div class="maintenance-inner">
+            <div class="maintenance-content">
+              <div class="maintenance-tag">ONGOING PEACE OF MIND</div>
+              <h3 class="maintenance-title">Website Maintenance &amp; Customization</h3>
+              <p class="maintenance-text">
+                Keep your website fast, secure, and fresh. Includes minor content updates, routine speed audits, small design adjustments, and direct technical support.
+                <span class="maintenance-disclaimer">(Major redesigns and custom web applications quoted separately.)</span>
+              </p>
+            </div>
+            <div class="maintenance-action">
+              <div class="maintenance-price-tag">
+                <span class="currency">₹</span><span class="amount">999</span><span class="period">/ month</span>
+              </div>
+              <a href="#contact" class="btn btn-outline" data-service-select="Maintenance">Add Maintenance Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRICING CALCULATOR (Section 24) -->
+        <div class="calculator-container" id="pricing-calculator" data-reveal="fade-up">
+          <div class="calculator-header">
+            <div class="calc-badge">&#9881; INTERACTIVE ESTIMATOR</div>
+            <h3 class="calc-title">Project Cost Calculator</h3>
+            <p class="calc-subtitle">Select the individual services you require for a real-time customized estimate with your 25% new customer discount applied automatically.</p>
+          </div>
+
+          <div class="calculator-body">
+            <!-- Services Checklist -->
+            <div class="calculator-services" id="calculator-checkboxes">
+              <!-- Dynamically rendered by script.js -->
+            </div>
+
+            <!-- Summary Card -->
+            <div class="calculator-summary">
+              <h4 class="summary-title">Estimate Summary</h4>
+              <div class="summary-line">
+                <span>Selected Items</span>
+                <span id="calc-items-count">0 services</span>
+              </div>
+              <div class="summary-line">
+                <span>Standard Subtotal</span>
+                <span id="calc-subtotal" class="subtotal-val">₹0</span>
+              </div>
+              <div class="summary-line discount-line">
+                <span>25% New Customer Discount</span>
+                <span id="calc-discount" class="discount-val">-₹0</span>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-line total-line">
+                <span>Estimated Total</span>
+                <span id="calc-total" class="total-val">₹0</span>
+              </div>
+
+              <button id="calc-start-project-btn" class="btn btn-primary btn-block calc-cta">
+                Start My Project &rarr;
+              </button>
+              <p class="calc-note">*Final proposal tailored following initial brief consultation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / FOUNDER SECTION (Section 25) -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Team Leadership Visual (Section 25) -->
+          <div class="about-visual" data-reveal="scale-in">
+            <div class="about-team-grid" id="about-team-grid">
+              <!-- Founder Card -->
+              <div class="team-card founder-card" id="team-card-founder">
+                <div class="founder-img-wrapper">
+                  <img id="founder-display-img" src="assets/founder.jpg" alt="Vansh Prajapati - Founder &amp; Creative Director" class="founder-img" loading="lazy">
+                  <div class="founder-overlay-glow"></div>
+                  <div class="founder-badge">
+                    <span class="founder-badge-role">FOUNDER</span>
+                    <span class="founder-badge-agency" id="founder-display-name">Vansh Prajapati</span>
+                  </div>
+                </div>
+                <div class="team-card-info">
+                  <div class="team-member-role" id="founder-display-role">Founder &amp; Creative Director</div>
+                  <div class="team-member-exp" id="founder-display-exp" style="display: none;"></div>
+                  <p class="team-member-bio" id="founder-display-bio" style="display: none;"></p>
+                  <div class="team-member-socials" id="founder-display-socials" style="display: none;"></div>
+                </div>
+              </div>
+
+              <!-- Co-Founder Card -->
+              <div class="team-card cofounder-card" id="team-card-cofounder">
+                <div class="founder-img-wrapper">
+                  <img id="cofounder-display-img" src="assets/cofounder-placeholder.svg" alt="Himanshu Kumar - Co-Founder &amp; Strategy &amp; Technology Lead" class="founder-img" loading="lazy">
+                  <div class="founder-overlay-glow"></div>
+                  <div class="founder-badge">
+                    <span class="founder-badge-role">CO-FOUNDER</span>
+                    <span class="founder-badge-agency" id="cofounder-display-name">Himanshu Kumar</span>
+                  </div>
+                </div>
+                <div class="team-card-info">
+                  <div class="team-member-role" id="cofounder-display-role">Co-Founder &amp; Strategy &amp; Technology Lead</div>
+                  <div class="team-member-exp" id="cofounder-display-exp" style="display: none;"></div>
+                  <p class="team-member-bio" id="cofounder-display-bio" style="display: none;"></p>
+                  <div class="team-member-socials" id="cofounder-display-socials" style="display: none;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story & Metrics -->
+          <div class="about-content" data-reveal="fade-up">
+            <div class="section-badge">AGENCY PHILOSOPHY</div>
+            <h2 class="section-heading" data-edit-key="about_heading">Built for Brands With a Vision</h2>
+            
+            <p class="about-lead" data-edit-key="about_lead">
+              "PIXIVO was created to bridge the gap between great ideas and great digital execution."
+            </p>
+
+            <p class="about-text" data-edit-key="about_text_1">
+              Too many ambitious businesses settle for rigid templates, disjointed branding, and forgettable advertising. We combine high-concept visual craftsmanship with engineering precision to create digital systems that don't merely look exquisite — they actively convert visitors into loyal advocates.
+            </p>
+
+            <p class="about-text" data-edit-key="about_text_2">
+              From fluid typography to bespoke neural advertising, our work is shaped by one unyielding standard: making your brand impossible to overlook in crowded digital landscapes.
+            </p>
+
+            <!-- Trust Indicators / Animated Counter Metrics -->
+            <div class="about-metrics" id="about-metrics">
+              <div class="metric-item">
+                <div class="metric-value"><span class="counter" data-target="5">0</span><span class="plus">+</span></div>
+                <div class="metric-label">Projects Delivered</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value"><span class="counter" data-target="1">0</span><span class="plus">+</span></div>
+                <div class="metric-label">Month Building Brands</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value"><span class="counter" data-target="8">0</span></div>
+                <div class="metric-label">Design Disciplines</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK (STUDIO METHODOLOGY) -->
+    <section id="how-we-work" class="section workflow-section">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <div class="section-badge">STUDIO METHODOLOGY</div>
+          <h2 class="section-heading">How We Work</h2>
+          <p class="section-subheading">
+            A structured, collaborative approach to translating bold visions into refined digital systems.
+          </p>
+        </div>
+
+        <div class="workflow-grid" id="how-we-work-grid">
+          <!-- Rendered dynamically by script.js with SSR fallback -->
+          <div class="workflow-card" data-reveal="fade-up" data-delay="0.1">
+            <div class="workflow-step">01</div>
+            <h3 class="workflow-title">Discover</h3>
+            <p class="workflow-desc">Understand the brand, audience, objective and competitive environment to establish clear strategic direction.</p>
+          </div>
+          <div class="workflow-card" data-reveal="fade-up" data-delay="0.2">
+            <div class="workflow-step">02</div>
+            <h3 class="workflow-title">Design</h3>
+            <p class="workflow-desc">Build the visual system, digital experience and creative direction with high-fidelity craftsmanship.</p>
+          </div>
+          <div class="workflow-card" data-reveal="fade-up" data-delay="0.3">
+            <div class="workflow-step">03</div>
+            <h3 class="workflow-title">Refine</h3>
+            <p class="workflow-desc">Test, review and refine the work across relevant devices, screen resolutions and media formats.</p>
+          </div>
+          <div class="workflow-card" data-reveal="fade-up" data-delay="0.4">
+            <div class="workflow-step">04</div>
+            <h3 class="workflow-title">Deliver</h3>
+            <p class="workflow-desc">Prepare organized production-ready assets, documentation and responsive implementation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (Section 27) -->
+    <section id="faq" class="section faq-section">
+      <div class="container faq-container">
+        <div class="section-header text-center" data-reveal="fade-up">
+          <div class="section-badge">CLARITY FIRST</div>
+          <h2 class="section-heading" data-edit-key="faq_heading">Frequently Asked Questions</h2>
+          <p class="section-subheading" data-edit-key="faq_subheading">
+            Everything you need to know about partnering with PIXIVO, timelines, ownership, and revisions.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion" data-reveal="fade-up">
+          <!-- FAQ Items rendered dynamically from script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (Section 28, 29, 30, 65) -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left Info Column -->
+          <div class="contact-info" data-reveal="fade-up">
+            <div class="section-badge">COMMENCE COLLABORATION</div>
+            <h2 class="contact-headline" data-edit-key="contact_heading">
+              Let's Build Something <span class="gradient-text">Impossible to Ignore.</span>
+            </h2>
+            <p class="contact-desc" data-edit-key="contact_subheading">
+              Have a bold vision? Share your requirements below to claim your 25% new customer discount and receive a comprehensive proposal within 24 hours.
+            </p>
+
+            <div class="contact-channels">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7GfuMAbpWOUm3ev4ShTIrvHQ8t2C8Zf_lW9PGN_SROAVxRg/viewform" target="_blank" rel="noopener noreferrer" class="channel-card highlight-channel">
+                <div class="channel-icon icon-gold">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Official Project Brief</span>
+                  <span class="channel-value">Fill Out Google Form &rarr;</span>
+                </div>
+              </a>
+
+              <a href="mailto:connect.pixivo@gmail.com" class="channel-card">
+                <div class="channel-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Official Email</span>
+                  <span class="channel-value">connect.pixivo@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/heypixivo/" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Instagram Direct</span>
+                  <span class="channel-value">@heypixivo</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Assurances -->
+            <div class="contact-assurance">
+              <div class="assurance-item">
+                <span class="assurance-check">&#10003;</span>
+                <span>Direct response within 24 hours</span>
+              </div>
+              <div class="assurance-item">
+                <span class="assurance-check">&#10003;</span>
+                <span>Free 30-minute creative strategy call</span>
+              </div>
+              <div class="assurance-item">
+                <span class="assurance-check">&#10003;</span>
+                <span>Clear upfront pricing structure</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION (Section 60) -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="cta-inner text-center" data-reveal="fade-up">
+          <div class="cta-ambient-glow" aria-hidden="true"></div>
+          <div class="cta-badge">TRANSCEND THE ORDINARY</div>
+          <h2 class="cta-title" data-edit-key="final_cta_title">Ready to Make Your Brand Move?</h2>
+          <p class="cta-subtitle" data-edit-key="final_cta_subtitle">
+            Let's turn your idea into a digital experience people remember.
+          </p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary btn-lg">Start a Project</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7GfuMAbpWOUm3ev4ShTIrvHQ8t2C8Zf_lW9PGN_SROAVxRg/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>Project Brief (Google Form)</span>
+            </a>
+            <a href="https://www.instagram.com/heypixivo/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Follow @heypixivo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Section 32, 33) -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Newsletter Row (Section 31) -->
+      <div class="footer-newsletter-box" data-reveal="fade-up">
+        <div class="newsletter-content">
+          <h3 class="newsletter-title">Stay in the Digital Loop</h3>
+          <p class="newsletter-desc">Subscribe for curated insights on visual strategy, AI advertising trends, and motion direction.</p>
+        </div>
+        <form id="newsletter-form" class="newsletter-form" novalidate>
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletter-email" placeholder="Enter your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary">Stay in the Loop</button>
+          </div>
+          <span class="newsletter-feedback" id="newsletter-feedback"></span>
+        </form>
+      </div>
+
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col footer-brand-col">
+          <a href="#home" class="brand-logo-link" aria-label="PIXIVO home">
+            <img src="assets/logo.png" alt="PIXIVO logo" class="brand-logo" width="40" height="40" onerror="this.onerror=null; this.src='assets/logo.svg';">
+            <span class="brand-name">PIXIVO</span>
+          </a>
+          <p class="footer-tagline">Where Vision Meets Motion</p>
+          <p class="footer-bio">
+            Premium Creative &amp; Digital Experience Agency crafting websites, visual identities, and AI motion for modern brands.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pricing">Pricing &amp; Calculator</a></li>
+            <li><a href="#about">About Studio</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Brand Websites</a></li>
+            <li><a href="#services">Premium Logos</a></li>
+            <li><a href="#services">AI Product Advertisements</a></li>
+            <li><a href="#services">Logo Animation</a></li>
+            <li><a href="#services">Product Launch Creatives</a></li>
+            <li><a href="#services">Social Media Handling</a></li>
+            <li><a href="#services">AI Customer Experience</a></li>
+          </ul>
+        </div>
+
+        <!-- Social & Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Direct Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc7GfuMAbpWOUm3ev4ShTIrvHQ8t2C8Zf_lW9PGN_SROAVxRg/viewform" target="_blank" rel="noopener noreferrer" style="color: var(--c-cyan); font-weight: 600;">Project Brief (Google Form) &rarr;</a></li>
+            <li><a href="mailto:connect.pixivo@gmail.com">connect.pixivo@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/heypixivo/" target="_blank" rel="noopener noreferrer">Instagram (@heypixivo)</a></li>
+          </ul>
+          <div class="footer-support-note">
+            <span>Availability: Open for Q2/Q3 Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 PIXIVO. All rights reserved.</p>
+        <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Vanilla JavaScript (Section 2, 3) -->
+  <script src="script.js"></script>
+</body>
+</html>

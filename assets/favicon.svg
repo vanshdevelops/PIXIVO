@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="p-cyan-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="60%" stop-color="#3a86ff"/>
+      <stop offset="100%" stop-color="#7209b7"/>
+    </linearGradient>
+    <linearGradient id="p-white-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#e2e8f0"/>
+      <stop offset="75%" stop-color="#8338ec"/>
+      <stop offset="100%" stop-color="#f72585"/>
+    </linearGradient>
+    <linearGradient id="cube-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff70a6"/>
+      <stop offset="100%" stop-color="#f72585"/>
+    </linearGradient>
+    <linearGradient id="cube-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#3a86ff"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background dark badge -->
+  <rect width="128" height="128" rx="28" fill="#070709"/>
+
+  <!-- Glowing P-Shape -->
+  <g transform="translate(10, 8) scale(0.85)">
+    <!-- Floating Pixels / Cubes -->
+    <rect x="24" y="16" width="9" height="9" rx="1.5" fill="url(#cube-pink)" />
+    <rect x="18" y="32" width="8" height="8" rx="1.5" fill="url(#cube-pink)" opacity="0.9" />
+    <rect x="30" y="30" width="8" height="8" rx="1.5" fill="url(#cube-blue)" />
+    <rect x="38" y="18" width="18" height="18" rx="3" fill="url(#cube-pink)" filter="url(#glow)"/>
+    <rect x="33" y="38" width="13" height="13" rx="2" fill="url(#cube-blue)" />
+    <rect x="49" y="47" width="16" height="16" rx="2.5" fill="url(#cube-blue)" filter="url(#glow)"/>
+
+    <!-- Main Ribbon Arch & Stem -->
+    <!-- Lower Stem -->
+    <path d="M49 58 L49 104 L62 94 L62 70 Z" fill="url(#p-cyan-blue)" />
+    <path d="M49 70 C49 85 55 98 62 94 L62 70 C58 70 52 68 49 58 Z" fill="#4361ee" opacity="0.85" />
+    
+    <!-- Outer Flowing Curve -->
+    <path d="M54 36 C75 36 102 46 102 68 C102 88 82 96 62 70 C78 78 90 74 90 64 C90 52 74 46 54 46 Z" fill="url(#p-white-purple)" filter="url(#glow)" />
+    
+    <!-- Pearlescent central fold -->
+    <path d="M54 36 C72 36 94 44 94 58 C86 52 68 46 49 58 L54 36 Z" fill="#ffffff" opacity="0.95" />
+    <path d="M49 58 C68 46 86 52 94 58 C86 70 72 80 62 70 C56 75 52 82 49 104 C47 90 47 70 49 58 Z" fill="url(#p-cyan-blue)" />
+  </g>
+</svg>
